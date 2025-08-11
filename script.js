@@ -45,11 +45,11 @@ function handleCommand(cmd) {
         if (cmd === "clear") {
             output.innerHTML = "";
         } else {
-            output.innerHTML += `<div><span class="prompt">acer@DarkCore:~$</span> ${cmd}</div>`;
+            output.innerHTML += `<div><span class="prompt">guest@Terminal:~$</span> ${cmd}</div>`;
             output.innerHTML += `<div>${commands[cmd]}</div>`;
         }
     } else {
-        output.innerHTML += `<div><span class="prompt">acer@DarkCore:~$</span> ${cmd}</div>`;
+        output.innerHTML += `<div><span class="prompt">guest@Terminal:~$</span> ${cmd}</div>`;
         output.innerHTML += `<div>Command not found. Type 'help' to see available commands.</div>`;
     }
     // Tự scroll xuống cuối
