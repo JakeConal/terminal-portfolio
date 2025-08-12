@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminal Portfolio - HieuNguyen</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
 </head>
 <body>
-    <!-- Nền máy tính -->
-    <div id="desktop">
-        <!-- Cửa sổ terminal -->
-        <div id="terminal-window">
-            <!-- Thanh tiêu đề -->
-            <div id="title-bar">
-                <span class="title">terminal</span>
-                <div class="window-controls">
+    <!--screen-->
+    <div>
+        <!--terminal-->
+        <div id="terminal">
+
+            <!--terminal header-->
+            <div id="terminal-header">
+                <span class="title">HieuNguyen's Portfolio</span>
+                <div class="mac-control">
                     <span class="btn close"></span>
                     <span class="btn min"></span>
                     <span class="btn max"></span>
                 </div>
             </div>
 
-            <!-- Khu vực terminal -->
-            <div id="terminal-content">
-                <div id="output"></div>
-                <div class="input-line">
-                    <span class="prompt">guest@Terminal:~$</span>
-                    <input type="text" id="input" autofocus autocomplete="off">
+            <!--terminal body-->
+            <div id="terminal-body">
+                <div id="terminal-output"></div>
+                <div id="terminal-input">
+                    <span>guess@Portfolio:~$ </span>
+                    <input type="text" id="input-field" autofocus />
                 </div>
             </div>
+
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
