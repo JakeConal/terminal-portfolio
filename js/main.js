@@ -1,13 +1,19 @@
-import welcomeCommand from './commands.js';
+import { welcomeCommand, aboutCommand, projectsCommand, skillsCommand, jokeCommand, helpCommand, clearCommand } from "./commands.js";
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 
 const commandMap = new Map([
-    ['welcome', welcomeCommand]
+    ['welcome', welcomeCommand],
+    ['about', aboutCommand],
+    ['projects', projectsCommand],
+    ['skills', skillsCommand],
+    ['joke', jokeCommand],
+    ['help', helpCommand],
+    ['clear', clearCommand],
 ]);
 
-input.addEventListener("keydown", function(event) {
+input.addEventListener("keydown", async function(event) {
     if (event.key === "Enter") {
         const command = input.value.trim();
         const [cmd, ...argsArr] = command.split(" ");
@@ -25,7 +31,7 @@ input.addEventListener("keydown", function(event) {
         `;
 
         if (commandMap.has(cmd)) {
-            const result = commandMap.get(cmd)(arg);
+            const result = await commandMap.get(cmd)(arg);
             if (result) {
                 output.innerHTML += `<div class="output">${result}</div>`;
             }
