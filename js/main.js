@@ -39,4 +39,41 @@ input.addEventListener("keydown", function(event) {
         input.value = "";
     }
 });
+
+output.innerHTML += `
+            <div class="command">
+                <span class="prompt">
+                    <span class="user">guest</span>
+                    <span class="host">@hieunguyen.portfolio</span>
+                    <span class="path">:~$</span>
+                </span> 
+                <span class="command-text">welcome</span>
+            </div>
+        `;
 output.innerHTML += welcomeCommand();
+
+const terminalBar = document.getElementById("terminal-header");
+const terminal = document.getElementById("terminal");
+
+let offsetX = 0, offsetY = 0;
+let isDragging = false;
+
+terminalBar.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - terminal.offsetLeft;
+    offsetY = e.clientY - terminal.offsetTop;
+    document.body.style.userSelect = "none";
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        terminal.style.position = "absolute";
+        terminal.style.left = (e.clientX - offsetX) + "px";
+        terminal.style.top = (e.clientY - offsetY) + "px";
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    document.body.style.userSelect = "auto";
+});
