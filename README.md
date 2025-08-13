@@ -16,7 +16,7 @@
 
 ## 🎯 Overview
 
-This project is a **terminal-style portfolio** that mimics a real command-line interface, providing an engaging and interactive way to explore my professional background, skills, and projects. Built with vanilla JavaScript and modern ES6 modules, it offers a unique user experience that stands out from traditional portfolios.
+This project is a **terminal-style portfolio** that mimics a real command-line interface, providing an engaging and interactive way to explore my professional background, skills, and projects. Built with vanilla JavaScript, it offers a unique user experience that stands out from traditional portfolios.
 
 ## 📸 Screenshots
 
