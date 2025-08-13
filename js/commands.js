@@ -67,7 +67,7 @@ export async function projectsCommand() {
         }
 
         let html = `<strong>My Projects:</strong><br><br>`;
-        repos.slice(0, 5).forEach(repo => { // Show only first 5 repos
+        repos.slice(0, 10).forEach(repo => { 
             html += `
                 <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid #00ff00;">
                     <a href="${repo.html_url}" target="_blank" style="color: #00ff00; text-decoration: none; font-weight: bold;">${repo.name}</a><br>
